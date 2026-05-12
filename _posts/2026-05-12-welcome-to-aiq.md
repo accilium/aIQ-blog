@@ -17,6 +17,6 @@ the systems we build, and the practical lessons we pick up along the way.
 ## Why another AI blog?
 
 We are tired of all the writing on LinkedIN and want to share insights on our journey in a way that feels right for us.
-GitHub and Github pages feels right, as most of the thinking we produce is written in markdown and managed in Git. We are also committed to open-source skills and assets we create in public respostories to inspire other to follow us. 
+GitHub and Github pages feels right, as most of the thinking we produce is written in markdown and managed in Git. We are also committed to open-source skills and assets we create in public respostories to inspire others to follow us. 
 
 Stay tuned — more posts coming soon.
