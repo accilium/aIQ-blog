@@ -2,7 +2,7 @@
 layout: post
 title: "Welcome to aIQ"
 date: 2026-05-12
-author: aIQ
+author: Peter
 ---
 
 Welcome to **aIQ**, a blog about accilium's artificial intelligence journey — the ideas behind it,

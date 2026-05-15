@@ -6,7 +6,7 @@ layout: default
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-meta">
       <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
-      {% if page.author %} · {{ page.author }}{% endif %}
+      {% if page.author %}<span class="post-meta-sep" aria-hidden="true">·</span><span class="post-meta-author">{{ page.author }}</span>{% endif %}
     </p>
   </header>
 
