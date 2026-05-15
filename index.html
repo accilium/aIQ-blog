@@ -22,7 +22,10 @@ layout: default
     <ul class="post-list">
       {% for post in site.posts %}
         <li class="post-item">
-          <time class="post-item-date">{{ post.date | date: "%B %d, %Y" }}</time>
+          <p class="post-item-meta">
+            <time class="post-item-date">{{ post.date | date: "%B %d, %Y" }}</time>
+            {% if post.author %}<span class="post-item-sep" aria-hidden="true">·</span><span class="post-item-author">{{ post.author }}</span>{% endif %}
+          </p>
           <h3 class="post-item-title">
             <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
           </h3>
