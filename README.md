@@ -2,7 +2,7 @@
 
 Source for [**aIQ**](https://accilium.github.io/aIQ-blog/), accilium's blog on
 artificial intelligence, re-architecting work, and the craft of building
-reliable AI systems.
+intelligent systems.
 
 ## What this is
 
