@@ -28,8 +28,8 @@ sausage is made, the repo is the sausage factory.
 
 ## Maintainers
 
-- [Leo Kühne-Hellmessen](https://github.com/l21n)
-- [Peter Allan](https://github.com/tr-ai-lblazer)
+Maintained by the accilium aIQ team. For corrections or questions, open an
+issue.
 
 ## Local preview
 
