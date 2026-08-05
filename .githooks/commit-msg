@@ -1,0 +1,36 @@
+#!/bin/sh
+#
+# Commit-message guard for a public repository.
+#
+# Every commit here must be attributable to a person. Automated co-author
+# trailers and tool footers added by editors or assistants are stripped
+# before the commit lands, not after.
+#
+# Enable once per clone:   git config core.hooksPath .githooks
+
+msg_file="$1"
+[ -f "$msg_file" ] || exit 0
+
+fail() {
+	printf '\n[commit-msg] %s\n\n' "$1" >&2
+	printf 'Fix the message and commit again. To inspect what tripped this,\n' >&2
+	printf 'see .githooks/commit-msg.\n\n' >&2
+	exit 1
+}
+
+# Strip comment lines so a commented-out template never trips the guard.
+body=$(grep -v '^#' "$msg_file")
+
+if printf '%s' "$body" | grep -qi 'anthropic'; then
+	fail "The message references 'anthropic'. Commits in this repository carry no tool or assistant attribution."
+fi
+
+if printf '%s' "$body" | grep -qiE '^[[:space:]]*co-authored-by:.*(noreply@|claude|copilot|\[bot\])'; then
+	fail "Automated co-author trailer found. Remove it — authorship here is a person."
+fi
+
+if printf '%s' "$body" | grep -qiE 'generated with|🤖'; then
+	fail "Tool-generation footer found. Remove it — the message should describe the change, not how it was written."
+fi
+
+exit 0

@@ -1,0 +1,32 @@
+#!/bin/sh
+#
+# Author guard for a public repository.
+#
+# Two checks, both about provenance rather than identity:
+#   1. The author is a person, not a bot or assistant account.
+#   2. The author email is a real, deliverable address — not the hostname
+#      git invents when user.email was never set, which publishes the name
+#      of someone's personal machine.
+#
+# Enable once per clone:   git config core.hooksPath .githooks
+
+ident=$(git var GIT_AUTHOR_IDENT 2>/dev/null) || exit 0
+email=$(printf '%s' "$ident" | sed -n 's/.*<\(.*\)>.*/\1/p')
+
+fail() {
+	printf '\n[pre-commit] %s\n\n' "$1" >&2
+	printf 'Current author: %s\n' "$ident" >&2
+	printf 'Set it with:    git config user.name "..." && git config user.email "..."\n\n' >&2
+	exit 1
+}
+
+case "$email" in
+*@anthropic.com | *@users.noreply.github.com*bot* | *[Bb]ot@* | claude@*)
+	fail "Author is an automated account. Commits in this repository are authored by a person."
+	;;
+*.local | *.lan | *.home | *.fritz.box | *.localdomain | "" | "(none)")
+	fail "Author email is a local machine hostname, not a real address. Committing it would publish your device name."
+	;;
+esac
+
+exit 0
