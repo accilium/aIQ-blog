@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Judgement You Can't Grade"
-date: 2026-08-14
+date: 2026-08-07
 author: Mary
 ---
 
