@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Attention Is All You Need (this is not about transformer architecture)"
+title: "Attention Is All You Need"
 date: 2026-08-21
 author: David
 ---
@@ -11,22 +11,18 @@ I review what comes back, give feedback and make decisions - every few seconds. 
 
 I do have calls in between or get something to eat from the grocery store next door, but thanks to the mobile apps I can keep working with my agents on the go too. I could not have built the same thing in the same time myself; not even close, but at the end of such a day I feel more exhausted than after an even longer day of building decks and Excel files "manually". It is a different kind of hard.
 
-I know not many work like this at the moment - maybe a few spearheads - but when talking to clients, some of the leaders currently target this type of work mode for their employees. Employees who leverage their output 10x with agents to maximise profit and whatever you dream of.
+I know not many work like this at the moment - maybe a few spearheads - but when talking to clients, some of the leaders currently target this type of work mode for their employees, at a multiple of today's output.
 
-## Why Human-in-the-loop (HITL) is everywhere
-
-Open any AI governance framework from the last two years and "Human-in-the-loop" is everywhere. It's super practical and solves so many challenges at once.
+Open any AI governance framework from the last two years and "Human-in-the-loop" is everywhere. It is practical, and it solves several problems at once.
 
 - Accountability (a named person is still required for many processes) - check.
 - Liability (if there was an error, there is an owner) - check.
 - Trust (if you don't fully trust the model, there was a human too) - check.
 - And sometimes Politics (AI does not replace employees, dear works council) - check.
 
-## HITL is exhausting
+On paper, HITL sounds sensible, and not exhausting at all (compared to actually doing the work). But reviewing and making decisions permanently requires a different type of capacity. We have heard of decision fatigue at some point, though mostly from studies of judges, doctors and shoppers rather than of anyone doing our kind of work. The judges are the closest fit: parole decisions were found to deteriorate across a sitting, in a study that has been argued about ever since, but which describes the failure mode exactly. A trained professional, reviewing case after case, getting worse at it as the day goes on. And it seems like we are running towards a work environment where we expect even more decisions in the future from every single (AI-enabled) worker.
 
-On paper, HITL sounds awesome and not exhausting at all (compared to actually doing the work). But reviewing and making decisions permanently requires a different type of capacity. We have heard of decision fatigue at some point, but this was mostly for high-paid CEOs. And it seems like we are running towards a work environment where we expect even more decisions in the future from every single (AI-enabled) worker.
-
-We don't really know how many decisions an employee can sustain or how decision quality changes around decision forty-two. Most likely our HITL-safeguard deteriorates drastically with every additional decision we expect the person to make - we keep the human-in-the-loop, but saturated, simply confirming instead of checking - only pressing "Always dangerously allow".
+We don't really know how many decisions an employee can sustain or how decision quality changes around decision forty-two. What is documented is the direction of travel, and it has a name: automation bias, and the vigilance decrement. A human supervising a system gets worse at catching its errors precisely because the system is usually right - Parasuraman and Riley described the pattern in 1997, long before any of this. So our HITL-safeguard deteriorates with every additional decision we expect the person to make. We keep the human-in-the-loop, but saturated, simply confirming instead of checking - pressing the option that allows everything, every time.
 
 The agents' token windows are displayed on screen and expanded regularly - my attention window is not. Same constraint, but only one of them gets properly measured. In the architecture the word comes from, attention is cheap, and it parallelises beautifully. In me it does neither.
 
@@ -36,6 +32,12 @@ Building also makes you work on one topic for a longer amount of time - sometime
 
 Currently I am still exploring how such a work mode can be sustainable. Right now, I am also relying on multiple years of experience, memorised patterns about key decisions and a trained attention span to deal with the "review, decide, delegate, move on" way. That is more or less what seniority is, and together with a strong interest in AI, it is why this is manageable.
 
-What I keep wondering though is what it feels like for someone in their first year who has none of it "automated" yet and pays the full price for every decision - no internal pattern library, memory of comparable cases or experience of when their own judgement deteriorates. I do not know yet - I guess that's a bigger question than this blog post.
+What I keep wondering though is what it feels like for someone in their first year who has none of it "automated" yet and pays the full price for every decision - no internal pattern library, memory of comparable cases or experience of when their own judgement deteriorates.
 
-Source (somewhat at least): Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., & Polosukhin, I. (2017). Attention is all you need. Advances in Neural Information Processing Systems, 30, 5998–6008
+Sources:
+
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., & Polosukhin, I. (2017). Attention is all you need. Advances in Neural Information Processing Systems, 30, 5998-6008
+
+Parasuraman, R., & Riley, V. (1997). Humans and automation: Use, misuse, disuse, abuse. Human Factors, 39(2), 230-253
+
+Danziger, S., Levav, J., & Avnaim-Pesso, L. (2011). Extraneous factors in judicial decisions. Proceedings of the National Academy of Sciences, 108(17), 6889-6892
