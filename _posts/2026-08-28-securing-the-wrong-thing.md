@@ -37,7 +37,7 @@ The policy then is scoped to secure exactly those use cases. Tight enough to hol
 
 Two things behind this already run in our own security practice today: a use-case assessment method that maps value streams and information flows to a risk rating and control set before a policy gets written, and an internal tool that checks a built agent's configuration against its policy before it reaches production.
 
-What is also taking shape is the other half. We've named it `ai-policy-assessment-skill`: a skill that reads an existing policy itself, and checks it against the business behind it instead of a generic checklist. It is built, and we've already run it end to end against a real, anonymised governance document.
+What is also taking shape is the other half. We've named it [`ai-policy-assessment-skill`](https://github.com/accilium/accilium-skills/tree/main/ai-policy-assessment-skill): a skill that reads an existing policy itself, and checks it against the business behind it instead of a generic checklist. It is built, we've already run it end to end against a real, anonymised governance document, and it is now public under MIT.
 
 It delivers two kinds of findings for two perspectives. On the one hand, it flags rules that are too strict and block potential use cases that could transform the business. On the other hand, it evaluates the rules against the value streams, use cases, processed data, regulatory compliance, etc., and flags where the ruleset is too loose and exposes the company to actual risk. In short: one skill improves your policy from two perspectives, the CIO's business approach as well as the CISO's security approach.
 
