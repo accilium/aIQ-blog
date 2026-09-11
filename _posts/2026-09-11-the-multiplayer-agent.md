@@ -1,0 +1,22 @@
+---
+layout: post
+title: "The Multiplayer Agent"
+date: 2026-09-11
+author: Leo
+---
+
+Almost every agent I have used assumes one user. It builds its context for one person in one session and throws it away when the window closes, and that is how we are used to working with AI. For a large part of our work it is the right shape, because one person drafts the letter, reads the contract or checks the deck, and a private context serves them well.
+
+The majority of our work does not look like that. It is projects and teamwork, where four or five people hold parts of one document, the date does not move, the material sits in a shared folder and the coordination happens in a chat where dates change and tasks get reassigned in passing. Nobody owns that coordination, which is why it is the first thing to slip when the pressure comes. Give everyone on such a team their own agent and you get five plans and nobody who can say which is current, and none of them will speak unless opened, while the message a project needs most is the reminder nobody asked for.
+
+For weeks now we have therefore been running an agent as a member of our Teams chats instead of behind a private window. It maintains deadlines, tracks who owes what, reads the documents from the shared folder and posts a status on a schedule. This note records what we learned from that placement, because it carried more design weight than either the model or the prompt.
+
+The case we started with is the proposal. Every tender we answer gets a Teams chat, a folder with the documents and a handful of colleagues who each own a piece of the answer, and whoever ends up holding the plan together does so on top of their own part. So we built the Pursuit Agent and added it to that chat like any other member. It finds the pursuit folder from the chat name, reads the tender and the chat, and keeps dates, tasks and owners in one file inside that folder. Every Friday morning it posts where the pursuit stands, daily in the last week before submission, and when someone asks which requirements are binding it reads the actual documents and answers with the source.
+
+Its memory is a single markdown file in the pursuit folder, the decision I would defend hardest, because memory inside a model cannot be checked by the team, whereas a file anyone can open puts a wrong date where a human can fix it. We changed the model underneath twice and the file did not change. It reads everything but answers only when addressed, because most of what it needs to know is said between people rather than to it, so each morning it records the plain facts from the chat and leaves open discussions alone. And since the pursuit folder holds sensitive data such as CVs, it runs as our own code on Azure in Sweden against a model hosted in Europe.
+
+Not everything held on the first try. An early version answered questions in a chat that was linked to no pursuit at all by falling back to a default one, which an outside review caught, so today an unlinked chat gets no answer and I say "it runs in one test chat" instead of "it is live". In that test chat, five colleagues asked it about evaluation criteria and binding requirements, and one asked for a birthday wish with a GIF, which it delivered. Three of the serious questions ended in "I couldn't finish this answer" because a read of the documents ran out of time. That is fixed, and failing in front of the whole team is exactly why it belongs there. What it does not do is as deliberate: no proposal text, no price, no bid decision and no channel to the client, because coordination is safe to delegate first and content is where our skill as consultants accumulates.
+
+We have not measured anything yet, so here is what I expect. The Friday status stops being a job someone does by hand, a date moved in the chat late in the evening is in the plan by morning, and a question about a tender gets a sourced answer within minutes. Two numbers will tell us whether that is true: how long a pursuit takes from the tender landing to the bid/no-bid decision, and how many hours a week the pursuit lead spends keeping the plan straight. If neither moves, the agent is a nice status bot and I will say so here.
+
+A single-player agent in a multiplayer problem does not fail loudly. It gives everyone a confident answer and multiplies the plans in circulation. Every project with several owners and one immovable date has that shape, and ours happened to be a tender. Which of yours is next?
