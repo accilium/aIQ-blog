@@ -20,3 +20,7 @@ Not everything held on the first try. An early version answered questions in a c
 We have not measured anything yet, so here is what I expect. The Friday status stops being a job someone does by hand, a date moved in the chat late in the evening is in the plan by morning, and a question about a tender gets a sourced answer within minutes. Two numbers will tell us whether that is true: how long a pursuit takes from the tender landing to the bid/no-bid decision, and how many hours a week the pursuit lead spends keeping the plan straight. If neither moves, the agent is a nice status bot and I will say so here.
 
 A single-player agent in a multiplayer problem does not fail loudly. It gives everyone a confident answer and multiplies the plans in circulation. Every project with several owners and one immovable date has that shape, and ours happened to be a tender. Which of yours is next?
+
+---
+
+*Three minutes of the agent in a chat, from adding it to the Friday status: [watch the explainer](https://youtu.be/V0WMqnBgPVo).*
