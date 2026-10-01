@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How We Handle the Token Addiction"
+title: "How We Handle Token Addiction"
 date: 2026-07-17
 author: Sebastian
 ---
